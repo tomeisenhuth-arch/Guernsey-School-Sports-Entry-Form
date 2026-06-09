@@ -170,11 +170,14 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
     <div class="sport-nav">
       <div class="sport-tab active" onclick="showSport('rugby',this)"><span class="icon">🏉</span>Rugby</div>
       <div class="sport-tab" onclick="showSport('netball',this)"><span class="icon">🏐</span>Netball</div>
+      <div class="sport-tab" onclick="showSport('netballnats',this)"><span class="icon">🏆</span>Netball Nationals</div>
       <div class="sport-tab" onclick="showSport('hockey',this)"><span class="icon">🏑</span>Hockey</div>
+      <div class="sport-tab" onclick="showSport('hockeyisland',this)"><span class="icon">🏑</span>Island Girls Hockey</div>
       <div class="sport-tab" onclick="showSport('basketball',this)"><span class="icon">🏀</span>Basketball</div>
       <div class="sport-tab" onclick="showSport('football',this)"><span class="icon">⚽</span>Football</div>
       <div class="sport-tab" onclick="showSport('cricket',this)"><span class="icon">🏏</span>Cricket</div>
-      <div class="sport-tab" onclick="showSport('badminton',this)"><span class="icon">🏸</span>Badminton</div>
+      <div class="sport-tab" onclick="showSport('badmintonss',this)"><span class="icon">🏸</span>Badminton School Sports</div>
+      <div class="sport-tab" onclick="showSport('badmintoneng',this)"><span class="icon">🏸</span>Badminton England</div>
       <div class="sport-tab" onclick="showSport('squash',this)"><span class="icon">🎾</span>Squash</div>
       <div class="sport-tab" onclick="showSport('triathlon',this)"><span class="icon">🚴</span>Triathlon</div>
       <div class="sport-tab" onclick="showSport('crosscountry',this)"><span class="icon">🏃</span>Cross Country</div>
@@ -185,7 +188,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
   <!-- ═══ RUGBY ═══ -->
   <div id="sport-rugby" class="sport-section active">
-    <div class="section-header"><h3>🏉 Rugby — Boys</h3><p>Up to 4 teams (A–D) per year group. Enter 1st VII where applicable.</p>
+    <div class="section-header"><h3>🏉 Rugby — Boys &amp; Girls</h3><p>Up to 4 teams (A–D) per year group. Enter 1st VII/U18 where applicable.</p>
       <table class="fx-table"><tbody>
         <tr><td>Y7 Festival</td><td>9 Mar &nbsp;·&nbsp; 2:00pm &nbsp;·&nbsp; MF</td></tr>
         <tr><td>Y9 Festival</td><td>10 Mar &nbsp;·&nbsp; 2:00pm &nbsp;·&nbsp; MF</td></tr>
@@ -198,24 +201,44 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
       </div>
     </div>
     <div class="card">
-      <div class="yg-tabs">
-        <div class="yg-tab active" onclick="showYG('rugby','y7',this)">Y7</div>
-        <div class="yg-tab" onclick="showYG('rugby','y8',this)">Y8</div>
-        <div class="yg-tab" onclick="showYG('rugby','y9',this)">Y9</div>
-        <div class="yg-tab" onclick="showYG('rugby','y10',this)">Y10</div>
-        <div class="yg-tab" onclick="showYG('rugby','y11',this)">Y11</div>
+      <div class="gender-tabs">
+        <div class="gender-tab active" onclick="showGender('rugby','boys',this)">Boys</div>
+        <div class="gender-tab" onclick="showGender('rugby','girls',this)">Girls</div>
       </div>
-      <div id="rugby-y7" class="yg-panel active"></div>
-      <div id="rugby-y8" class="yg-panel"></div>
-      <div id="rugby-y9" class="yg-panel"></div>
-      <div id="rugby-y10" class="yg-panel"></div>
-      <div id="rugby-y11" class="yg-panel"></div>
+      <div id="rugby-boys" class="gender-panel active">
+        <div class="yg-tabs">
+          <div class="yg-tab active" onclick="showYG('rugby-boys','y7',this)">Y7</div>
+          <div class="yg-tab" onclick="showYG('rugby-boys','y8',this)">Y8</div>
+          <div class="yg-tab" onclick="showYG('rugby-boys','y9',this)">Y9</div>
+          <div class="yg-tab" onclick="showYG('rugby-boys','y10',this)">Y10</div>
+          <div class="yg-tab" onclick="showYG('rugby-boys','y11',this)">Y11</div>
+        </div>
+        <div id="rugby-boys-y7" class="yg-panel active"></div>
+        <div id="rugby-boys-y8" class="yg-panel"></div>
+        <div id="rugby-boys-y9" class="yg-panel"></div>
+        <div id="rugby-boys-y10" class="yg-panel"></div>
+        <div id="rugby-boys-y11" class="yg-panel"></div>
+      </div>
+      <div id="rugby-girls" class="gender-panel">
+        <div class="yg-tabs">
+          <div class="yg-tab active" onclick="showYG('rugby-girls','y7',this)">Y7</div>
+          <div class="yg-tab" onclick="showYG('rugby-girls','y8',this)">Y8</div>
+          <div class="yg-tab" onclick="showYG('rugby-girls','y9',this)">Y9</div>
+          <div class="yg-tab" onclick="showYG('rugby-girls','y10',this)">Y10</div>
+          <div class="yg-tab" onclick="showYG('rugby-girls','y11',this)">Y11</div>
+        </div>
+        <div id="rugby-girls-y7" class="yg-panel active"></div>
+        <div id="rugby-girls-y8" class="yg-panel"></div>
+        <div id="rugby-girls-y9" class="yg-panel"></div>
+        <div id="rugby-girls-y10" class="yg-panel"></div>
+        <div id="rugby-girls-y11" class="yg-panel"></div>
+      </div>
     </div>
   </div>
 
   <!-- ═══ NETBALL ═══ -->
   <div id="sport-netball" class="sport-section">
-    <div class="section-header"><h3>🏐 Netball — Girls</h3><p>League/Friendlies: September–October. Enter 1st VII where applicable.</p>
+    <div class="section-header"><h3>🏐 Netball — Girls</h3><p>League/Friendlies: September–October. Enter 1st VII/U18 where applicable.</p>
       <table class="fx-table"><tbody>
         <tr><td>U14 National Schools</td><td>3 Nov &nbsp;·&nbsp; 2:00–4:00pm &nbsp;·&nbsp; BSJ</td></tr>
         <tr><td>U16 National Schools</td><td>5 Nov &nbsp;·&nbsp; 2:00–4:00pm &nbsp;·&nbsp; BSJ</td></tr>
@@ -440,45 +463,128 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
     </div>
   </div>
 
-  <!-- ═══ BADMINTON ═══ -->
-  <div id="sport-badminton" class="sport-section">
-    <div class="section-header"><h3>🏸 Badminton — Boys &amp; Girls</h3><p>School Sports Format &amp; England Badminton Championship Qualification.</p>
+  <!-- ═══ ISLAND GIRLS HOCKEY ═══ -->
+  <div id="sport-hockeyisland" class="sport-section">
+    <div class="section-header"><h3>🏑 Island Girls Hockey</h3><p>Y7, Y8 and Y9. Location: FL.</p>
       <table class="fx-table"><tbody>
-        <tr><td>KS4 School Sports</td><td>27 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Badminton Halls</td></tr>
-        <tr><td>KS3 School Sports</td><td>4 Dec &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Badminton Halls</td></tr>
-        <tr><td>KS3 England Qual.</td><td>19 Jan &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Badminton Halls</td></tr>
-        <tr><td>KS4 England Qual.</td><td>26 Jan &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Badminton Halls</td></tr>
+        <tr><td>Y9</td><td>18 Feb &nbsp;·&nbsp; 3:45–5:30pm &nbsp;·&nbsp; FL</td></tr>
+        <tr><td>Y8</td><td>23 Feb &nbsp;·&nbsp; 3:45–5:00pm &nbsp;·&nbsp; FL</td></tr>
+        <tr><td>Y7</td><td>24 Feb &nbsp;·&nbsp; 3:45–5:00pm &nbsp;·&nbsp; FL</td></tr>
       </tbody></table></div>
     <div class="sport-teacher-bar">
       <div class="field" style="margin-bottom:0">
-        <label class="field-label">Teacher in charge — Badminton <span class="req">*</span></label>
-        <input type="text" id="teacher-badminton" placeholder="Full name of teacher responsible for Badminton entries">
+        <label class="field-label">Teacher in charge — Island Girls Hockey <span class="req">*</span></label>
+        <input type="text" id="teacher-hockeyisland" placeholder="Full name of teacher responsible for Island Girls Hockey entries">
+      </div>
+    </div>
+    <div class="card">
+      <div class="yg-tabs">
+        <div class="yg-tab active" onclick="showYG('hockeyisland','y7',this)">Y7</div>
+        <div class="yg-tab" onclick="showYG('hockeyisland','y8',this)">Y8</div>
+        <div class="yg-tab" onclick="showYG('hockeyisland','y9',this)">Y9</div>
+      </div>
+      <div id="hockeyisland-y7" class="yg-panel active"></div>
+      <div id="hockeyisland-y8" class="yg-panel"></div>
+      <div id="hockeyisland-y9" class="yg-panel"></div>
+    </div>
+  </div>
+
+  <!-- ═══ NETBALL NATIONALS ═══ -->
+  <div id="sport-netballnats" class="sport-section">
+    <div class="section-header"><h3>🏆 Netball — National Schools Competition</h3><p>U14, U16 and U18. 12th November.</p>
+      <table class="fx-table"><tbody>
+        <tr><td>U14 National Schools</td><td>3 Nov &nbsp;·&nbsp; 2:00–4:00pm &nbsp;·&nbsp; BSJ</td></tr>
+        <tr><td>U16 National Schools</td><td>5 Nov &nbsp;·&nbsp; 2:00–4:00pm &nbsp;·&nbsp; BSJ</td></tr>
+        <tr><td>U18 National Schools</td><td>12 Nov &nbsp;·&nbsp; BSJ</td></tr>
+      </tbody></table></div>
+    <div class="sport-teacher-bar">
+      <div class="field" style="margin-bottom:0">
+        <label class="field-label">Teacher in charge — Netball Nationals <span class="req">*</span></label>
+        <input type="text" id="teacher-netballnats" placeholder="Full name of teacher responsible for Netball Nationals entries">
+      </div>
+    </div>
+    <div class="card">
+      <div class="yg-tabs">
+        <div class="yg-tab active" onclick="showYG('netballnats','u14',this)">U14</div>
+        <div class="yg-tab" onclick="showYG('netballnats','u16',this)">U16</div>
+        <div class="yg-tab" onclick="showYG('netballnats','u18',this)">U18</div>
+      </div>
+      <div id="netballnats-u14" class="yg-panel active"></div>
+      <div id="netballnats-u16" class="yg-panel"></div>
+      <div id="netballnats-u18" class="yg-panel"></div>
+    </div>
+  </div>
+
+  <!-- ═══ BADMINTON SCHOOL SPORTS ═══ -->
+  <div id="sport-badmintonss" class="sport-section">
+    <div class="section-header"><h3>🏸 Badminton — School Sports Format</h3><p>Boys &amp; Girls. KS3 and KS4.</p>
+      <table class="fx-table"><tbody>
+        <tr><td>KS4</td><td>27 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Badminton Halls</td></tr>
+        <tr><td>KS3</td><td>4 Dec &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Badminton Halls</td></tr>
+      </tbody></table></div>
+    <div class="sport-teacher-bar">
+      <div class="field" style="margin-bottom:0">
+        <label class="field-label">Teacher in charge — Badminton School Sports <span class="req">*</span></label>
+        <input type="text" id="teacher-badmintonss" placeholder="Full name of teacher responsible for Badminton School Sports entries">
       </div>
     </div>
     <div class="card">
       <div class="gender-tabs">
-        <div class="gender-tab active" onclick="showGender('badminton','boys',this)">Boys</div>
-        <div class="gender-tab" onclick="showGender('badminton','girls',this)">Girls</div>
+        <div class="gender-tab active" onclick="showGender('badmintonss','boys',this)">Boys</div>
+        <div class="gender-tab" onclick="showGender('badmintonss','girls',this)">Girls</div>
       </div>
-      <div id="badminton-boys" class="gender-panel active">
+      <div id="badmintonss-boys" class="gender-panel active">
         <div class="yg-tabs">
-          <div class="yg-tab active" onclick="showYG('badminton-boys','ks3',this)">KS3</div>
-          <div class="yg-tab" onclick="showYG('badminton-boys','ks4',this)">KS4</div>
-          <div class="yg-tab" onclick="showYG('badminton-boys','ks5',this)">KS5</div>
+          <div class="yg-tab active" onclick="showYG('badmintonss-boys','ks3',this)">KS3</div>
+          <div class="yg-tab" onclick="showYG('badmintonss-boys','ks4',this)">KS4</div>
         </div>
-        <div id="badminton-boys-ks3" class="yg-panel active"></div>
-        <div id="badminton-boys-ks4" class="yg-panel"></div>
-        <div id="badminton-boys-ks5" class="yg-panel"></div>
+        <div id="badmintonss-boys-ks3" class="yg-panel active"></div>
+        <div id="badmintonss-boys-ks4" class="yg-panel"></div>
       </div>
-      <div id="badminton-girls" class="gender-panel">
+      <div id="badmintonss-girls" class="gender-panel">
         <div class="yg-tabs">
-          <div class="yg-tab active" onclick="showYG('badminton-girls','ks3',this)">KS3</div>
-          <div class="yg-tab" onclick="showYG('badminton-girls','ks4',this)">KS4</div>
-          <div class="yg-tab" onclick="showYG('badminton-girls','ks5',this)">KS5</div>
+          <div class="yg-tab active" onclick="showYG('badmintonss-girls','ks3',this)">KS3</div>
+          <div class="yg-tab" onclick="showYG('badmintonss-girls','ks4',this)">KS4</div>
         </div>
-        <div id="badminton-girls-ks3" class="yg-panel active"></div>
-        <div id="badminton-girls-ks4" class="yg-panel"></div>
-        <div id="badminton-girls-ks5" class="yg-panel"></div>
+        <div id="badmintonss-girls-ks3" class="yg-panel active"></div>
+        <div id="badmintonss-girls-ks4" class="yg-panel"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ BADMINTON ENGLAND ═══ -->
+  <div id="sport-badmintoneng" class="sport-section">
+    <div class="section-header"><h3>🏸 Badminton — England Championship Qualification</h3><p>Boys &amp; Girls. KS3 and KS4.</p>
+      <table class="fx-table"><tbody>
+        <tr><td>KS3</td><td>19 Jan &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Badminton Halls</td></tr>
+        <tr><td>KS4</td><td>26 Jan &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Badminton Halls</td></tr>
+      </tbody></table></div>
+    <div class="sport-teacher-bar">
+      <div class="field" style="margin-bottom:0">
+        <label class="field-label">Teacher in charge — Badminton England <span class="req">*</span></label>
+        <input type="text" id="teacher-badmintoneng" placeholder="Full name of teacher responsible for Badminton England entries">
+      </div>
+    </div>
+    <div class="card">
+      <div class="gender-tabs">
+        <div class="gender-tab active" onclick="showGender('badmintoneng','boys',this)">Boys</div>
+        <div class="gender-tab" onclick="showGender('badmintoneng','girls',this)">Girls</div>
+      </div>
+      <div id="badmintoneng-boys" class="gender-panel active">
+        <div class="yg-tabs">
+          <div class="yg-tab active" onclick="showYG('badmintoneng-boys','ks3',this)">KS3</div>
+          <div class="yg-tab" onclick="showYG('badmintoneng-boys','ks4',this)">KS4</div>
+        </div>
+        <div id="badmintoneng-boys-ks3" class="yg-panel active"></div>
+        <div id="badmintoneng-boys-ks4" class="yg-panel"></div>
+      </div>
+      <div id="badmintoneng-girls" class="gender-panel">
+        <div class="yg-tabs">
+          <div class="yg-tab active" onclick="showYG('badmintoneng-girls','ks3',this)">KS3</div>
+          <div class="yg-tab" onclick="showYG('badmintoneng-girls','ks4',this)">KS4</div>
+        </div>
+        <div id="badmintoneng-girls-ks3" class="yg-panel active"></div>
+        <div id="badmintoneng-girls-ks4" class="yg-panel"></div>
       </div>
     </div>
   </div>
@@ -642,29 +748,29 @@ function buildTeamBlocks(containerId, sport, group) {
   if (!el || el.dataset.built) return;
   el.dataset.built = '1';
   // Sports that get a 1st VII slot above A/B/C/D
-  const hasvii = ['rugby','netball'];
+  const hasvii = ['rugby','netball','netballnats'];
   const baseSport = sport.split('-')[0];
-  const extraTeams = hasvii.includes(baseSport) ? ['1stVII'] : [];
-  const teams = [...extraTeams, 'A','B','C','D'];
+  const extraTeams = hasvii.includes(baseSport) ? ['1stVIIU18'] : [];
+  const teams = ['A','B','C','D',...extraTeams];
   let html = '';
   teams.forEach((t, i) => {
     const key = (sport + '-' + group + '-team' + t).replace(/[^a-z0-9-]/gi,'_');
-    const isVII = t === '1stVII';
-    const badge = isVII ? 'gold' : (i === (extraTeams.length) ? 'gold' : '');
+    const isVII = t === '1stVIIU18';
+    const badge = isVII ? 'gold' : (i === 0 ? 'gold' : '');
     html += `
     <div class="team-block${isVII ? ' vii-block' : ''}" id="block-${key}">
       <div class="team-label">
-        <div class="team-badge ${badge}" style="${isVII ? 'width:auto;padding:0 8px;border-radius:6px;font-size:0.7rem;' : ''}">${isVII ? '1st VII' : t}</div>
+        <div class="team-badge ${badge}" style="${isVII ? 'width:auto;padding:0 8px;border-radius:6px;font-size:0.7rem;' : ''}">${isVII ? '1st VII/U18' : t}</div>
         <label class="team-toggle">
           <input type="checkbox" id="cb-${key}" onchange="toggleTeam('${key}')">
-          <span>${isVII ? 'Enter 1st VII' : 'Enter Team ' + t}</span>
+          <span>${isVII ? 'Enter 1st VII/U18' : 'Enter Team ' + t}</span>
         </label>
       </div>
       <div class="team-fields" id="fields-${key}">
         <div class="two-col">
           <div class="field">
             <label class="field-label">Team name / label</label>
-            <input type="text" name="${key}-name" placeholder="${isVII ? '1st VII' : 'e.g. ' + group.toUpperCase() + ' ' + t}">
+            <input type="text" name="${key}-name" placeholder="${isVII ? '1st VII/U18' : 'e.g. ' + group.toUpperCase() + ' ' + t}">
           </div>
           <div class="field">
             <label class="field-label">Squad size</label>
@@ -770,7 +876,14 @@ function initSport(sport) {
 }
 
 // ── Init on load ─────────────────────────────────────────────────────────────
-buildTeamBlocks('rugby-y7', 'rugby', 'y7');
+buildTeamBlocks('rugby-boys-y7', 'rugby-boys', 'y7');
+buildTeamBlocks('rugby-girls-y7', 'rugby-girls', 'y7');
+buildTeamBlocks('netballnats-u14', 'netballnats', 'u14');
+buildTeamBlocks('hockeyisland-y7', 'hockeyisland', 'y7');
+buildTeamBlocks('badmintonss-boys-ks3', 'badmintonss-boys', 'ks3');
+buildTeamBlocks('badmintonss-girls-ks3', 'badmintonss-girls', 'ks3');
+buildTeamBlocks('badmintoneng-boys-ks3', 'badmintoneng-boys', 'ks3');
+buildTeamBlocks('badmintoneng-girls-ks3', 'badmintoneng-girls', 'ks3');
 buildTeamBlocks('football-boys-y7', 'football-boys', 'y7');
 buildTeamBlocks('cricket-boys-y7', 'cricket-boys', 'y7');
 buildTeamBlocks('cricket-girls-y7', 'cricket-girls', 'y7');

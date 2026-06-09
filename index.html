@@ -188,7 +188,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
   <!-- ═══ RUGBY ═══ -->
   <div id="sport-rugby" class="sport-section active">
-    <div class="section-header"><h3>🏉 Rugby — Boys &amp; Girls</h3><p>Up to 4 teams (A–D) per year group. Enter 1st VII/U18 where applicable.</p>
+    <div class="section-header"><h3>🏉 Rugby — Boys &amp; Girls</h3><p>Up to 4 teams (A–D) per year group. Up to 4 teams (A–D) per year group.</p>
       <table class="fx-table"><tbody>
         <tr><td>Y7 Festival</td><td>9 Mar &nbsp;·&nbsp; 2:00pm &nbsp;·&nbsp; MF</td></tr>
         <tr><td>Y9 Festival</td><td>10 Mar &nbsp;·&nbsp; 2:00pm &nbsp;·&nbsp; MF</td></tr>
@@ -238,11 +238,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
   <!-- ═══ NETBALL ═══ -->
   <div id="sport-netball" class="sport-section">
-    <div class="section-header"><h3>🏐 Netball — Girls</h3><p>League/Friendlies: September–October. Enter 1st VII/U18 where applicable.</p>
-      <table class="fx-table"><tbody>
-        <tr><td>U14 National Schools</td><td>3 Nov &nbsp;·&nbsp; 2:00–4:00pm &nbsp;·&nbsp; BSJ</td></tr>
-        <tr><td>U16 National Schools</td><td>5 Nov &nbsp;·&nbsp; 2:00–4:00pm &nbsp;·&nbsp; BSJ</td></tr>
-      </tbody></table></div>
+    <div class="section-header"><h3>🏐 Netball — Girls</h3><p>League/Friendlies: September–October. Up to 4 teams (A–D) per year group.</p></div>
     <div class="sport-teacher-bar">
       <div class="field" style="margin-bottom:0">
         <label class="field-label">Teacher in charge — Netball <span class="req">*</span></label>
@@ -272,9 +268,6 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
         <tr><td>Y7 Tournament</td><td>8 Dec &nbsp;·&nbsp; 3:30–5:00pm &nbsp;·&nbsp; Boys: MF &nbsp;/&nbsp; Girls: FL</td></tr>
         <tr><td>Y9 Tournament</td><td>9 Dec &nbsp;·&nbsp; 3:30–5:00pm &nbsp;·&nbsp; Boys: MF &nbsp;/&nbsp; Girls: FL</td></tr>
         <tr><td>Y8 Tournament</td><td>11 Dec &nbsp;·&nbsp; 3:30–5:00pm &nbsp;·&nbsp; Boys: MF &nbsp;/&nbsp; Girls: FL</td></tr>
-        <tr><td>Island Girls Y9</td><td>18 Feb &nbsp;·&nbsp; 3:45pm &nbsp;·&nbsp; FL</td></tr>
-        <tr><td>Island Girls Y8</td><td>23 Feb &nbsp;·&nbsp; 3:45pm &nbsp;·&nbsp; FL</td></tr>
-        <tr><td>Island Girls Y7</td><td>24 Feb &nbsp;·&nbsp; 3:45pm &nbsp;·&nbsp; FL</td></tr>
       </tbody></table></div>
     <div class="sport-teacher-bar">
       <div class="field" style="margin-bottom:0">
@@ -377,7 +370,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
       <table class="fx-table"><tbody>
         <tr><td>Girls Y7</td><td>10 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Victoria Park</td></tr>
         <tr><td>Girls Y8</td><td>9 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Victoria Park</td></tr>
-        <tr><td>Girls Y9</td><td>10 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Victoria Park</td></tr>
+        <tr><td>Girls Y9</td><td>11 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Victoria Park</td></tr>
         <tr><td>Girls Y10 &amp; Y11</td><td>19 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Victoria Park</td></tr>
       </tbody></table></div>
     <div class="sport-teacher-bar">
@@ -673,7 +666,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
   <!-- ═══ SOFTBALL ═══ -->
   <div id="sport-softball" class="sport-section">
-    <div class="section-header"><h3>🥎 Softball — Boys &amp; Girls</h3><p>League: June–July. Y7–Y10 entries. Up to 4 teams (A–D) per year group.</p></div>
+    <div class="section-header"><h3>🥎 Softball — Mixed</h3><p>League: June–July. Y7–Y10 entries. Up to 4 teams (A–D) per year group.</p></div>
     <div class="sport-teacher-bar">
       <div class="field" style="margin-bottom:0">
         <label class="field-label">Teacher in charge — Softball <span class="req">*</span></label>
@@ -681,34 +674,16 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
       </div>
     </div>
     <div class="card">
-      <div class="gender-tabs">
-        <div class="gender-tab active" onclick="showGender('softball','boys',this)">Boys</div>
-        <div class="gender-tab" onclick="showGender('softball','girls',this)">Girls</div>
+      <div class="yg-tabs">
+        <div class="yg-tab active" onclick="showYG('softball-mixed','y7',this)">Y7</div>
+        <div class="yg-tab" onclick="showYG('softball-mixed','y8',this)">Y8</div>
+        <div class="yg-tab" onclick="showYG('softball-mixed','y9',this)">Y9</div>
+        <div class="yg-tab" onclick="showYG('softball-mixed','y10',this)">Y10</div>
       </div>
-      <div id="softball-boys" class="gender-panel active">
-        <div class="yg-tabs">
-          <div class="yg-tab active" onclick="showYG('softball-boys','y7',this)">Y7</div>
-          <div class="yg-tab" onclick="showYG('softball-boys','y8',this)">Y8</div>
-          <div class="yg-tab" onclick="showYG('softball-boys','y9',this)">Y9</div>
-          <div class="yg-tab" onclick="showYG('softball-boys','y10',this)">Y10</div>
-        </div>
-        <div id="softball-boys-y7" class="yg-panel active"></div>
-        <div id="softball-boys-y8" class="yg-panel"></div>
-        <div id="softball-boys-y9" class="yg-panel"></div>
-        <div id="softball-boys-y10" class="yg-panel"></div>
-      </div>
-      <div id="softball-girls" class="gender-panel">
-        <div class="yg-tabs">
-          <div class="yg-tab active" onclick="showYG('softball-girls','y7',this)">Y7</div>
-          <div class="yg-tab" onclick="showYG('softball-girls','y8',this)">Y8</div>
-          <div class="yg-tab" onclick="showYG('softball-girls','y9',this)">Y9</div>
-          <div class="yg-tab" onclick="showYG('softball-girls','y10',this)">Y10</div>
-        </div>
-        <div id="softball-girls-y7" class="yg-panel active"></div>
-        <div id="softball-girls-y8" class="yg-panel"></div>
-        <div id="softball-girls-y9" class="yg-panel"></div>
-        <div id="softball-girls-y10" class="yg-panel"></div>
-      </div>
+      <div id="softball-mixed-y7" class="yg-panel active"></div>
+      <div id="softball-mixed-y8" class="yg-panel"></div>
+      <div id="softball-mixed-y9" class="yg-panel"></div>
+      <div id="softball-mixed-y10" class="yg-panel"></div>
     </div>
   </div>
 
@@ -748,7 +723,7 @@ function buildTeamBlocks(containerId, sport, group) {
   if (!el || el.dataset.built) return;
   el.dataset.built = '1';
   // Sports that get a 1st VII slot above A/B/C/D
-  const hasvii = ['rugby','netball','netballnats'];
+  const hasvii = [];
   const baseSport = sport.split('-')[0];
   const extraTeams = hasvii.includes(baseSport) ? ['1stVIIU18'] : [];
   const teams = ['A','B','C','D',...extraTeams];
@@ -887,8 +862,7 @@ buildTeamBlocks('badmintoneng-girls-ks3', 'badmintoneng-girls', 'ks3');
 buildTeamBlocks('football-boys-y7', 'football-boys', 'y7');
 buildTeamBlocks('cricket-boys-y7', 'cricket-boys', 'y7');
 buildTeamBlocks('cricket-girls-y7', 'cricket-girls', 'y7');
-buildTeamBlocks('softball-boys-y7', 'softball-boys', 'y7');
-buildTeamBlocks('softball-girls-y7', 'softball-girls', 'y7');
+buildTeamBlocks('softball-mixed-y7', 'softball-mixed', 'y7');
 buildYNPanel('triathlon-yn', 'triathlon', ['Y7','Y8','Y9','Y10','Y11']);
 buildYNPanel('crosscountry-yn', 'crosscountry', ['Y7','Y8','Y9','Y10','Y11']);
 buildYNPanel('athletics-yn', 'athletics', ['Y7','Y8','Y9','Y10']);

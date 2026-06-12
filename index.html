@@ -169,8 +169,8 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
     <h2>Select sport</h2>
     <div class="sport-nav">
       <div class="sport-tab active" onclick="showSport('rugby',this)"><span class="icon">🏉</span>Rugby</div>
-      <div class="sport-tab" onclick="showSport('netball',this)"><span class="icon">🏐</span>Netball</div>
-      <div class="sport-tab" onclick="showSport('netballnats',this)"><span class="icon">🏆</span>Netball Nationals</div>
+      <div class="sport-tab" onclick="showSport('netball',this)"><span class="icon">🏐</span>Island Schools Netball</div>
+      <div class="sport-tab" onclick="showSport('netballnats',this)"><span class="icon">🏆</span>National Schools Netball</div>
       <div class="sport-tab" onclick="showSport('hockey',this)"><span class="icon">🏑</span>Hockey</div>
       <div class="sport-tab" onclick="showSport('hockeyisland',this)"><span class="icon">🏑</span>Island Girls Hockey</div>
       <div class="sport-tab" onclick="showSport('basketball',this)"><span class="icon">🏀</span>Basketball</div>
@@ -238,7 +238,12 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
   <!-- ═══ NETBALL ═══ -->
   <div id="sport-netball" class="sport-section">
-    <div class="section-header"><h3>🏐 Netball — Girls</h3><p>League/Friendlies: September–October. Up to 4 teams (A–D) per year group.</p></div>
+    <div class="section-header"><h3>🏐 Island Schools Netball — Girls</h3><p>League/Friendlies: September–October. Up to 4 teams (A–D) per year group.</p>
+      <table class="fx-table"><tbody>
+        <tr><td>Y8 &amp; Y9 Island Schools</td><td>10 Nov &nbsp;·&nbsp; Tue &nbsp;·&nbsp; 14:15–18:00 &nbsp;·&nbsp; BSJ</td></tr>
+        <tr><td>U16 Plate</td><td>12 Nov &nbsp;·&nbsp; Thu &nbsp;·&nbsp; 14:00–17:30 &nbsp;·&nbsp; BSJ</td></tr>
+        <tr><td>Y7 Island Schools</td><td>17 Nov &nbsp;·&nbsp; Tue &nbsp;·&nbsp; 16:00–18:00 &nbsp;·&nbsp; BSJ</td></tr>
+      </tbody></table></div>
     <div class="sport-teacher-bar">
       <div class="field" style="margin-bottom:0">
         <label class="field-label">Teacher in charge — Netball <span class="req">*</span></label>
@@ -368,7 +373,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
   <div id="sport-football" class="sport-section">
     <div class="section-header"><h3>⚽ Football — Boys &amp; Girls</h3><p>Boys League Season: September–November.</p>
       <table class="fx-table"><tbody>
-        <tr><td>Girls Y7</td><td>10 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Victoria Park</td></tr>
+        <tr><td>Girls Y7</td><td>24 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Victoria Park</td></tr>
         <tr><td>Girls Y8</td><td>9 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Victoria Park</td></tr>
         <tr><td>Girls Y9</td><td>11 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Victoria Park</td></tr>
         <tr><td>Girls Y10 &amp; Y11</td><td>19 Nov &nbsp;·&nbsp; 3:30–5:30pm &nbsp;·&nbsp; Victoria Park</td></tr>
@@ -483,8 +488,34 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
   </div>
 
   <!-- ═══ NETBALL NATIONALS ═══ -->
+  <div id="sport-islandnetball" class="sport-section">
+    <div class="section-header"><h3>🏐 Island Schools Netball</h3><p>Island Schools Tournament. Location: BSJ.</p>
+      <table class="fx-table"><tbody>
+        <tr><td>Y8 &amp; Y9 Island Schools</td><td>10 Nov &nbsp;·&nbsp; Tue &nbsp;·&nbsp; 14:15–18:00 &nbsp;·&nbsp; BSJ</td></tr>
+        <tr><td>U16 Plate</td><td>12 Nov &nbsp;·&nbsp; Thu &nbsp;·&nbsp; 14:00–17:30 &nbsp;·&nbsp; BSJ</td></tr>
+        <tr><td>Y7 Island Schools</td><td>17 Nov &nbsp;·&nbsp; Tue &nbsp;·&nbsp; 16:00–18:00 &nbsp;·&nbsp; BSJ</td></tr>
+      </tbody></table></div>
+    <div class="sport-teacher-bar">
+      <div class="field" style="margin-bottom:0">
+        <label class="field-label">Teacher in charge — National Schools Netball <span class="req">*</span></label>
+        <input type="text" id="teacher-islandnetball" placeholder="Full name of teacher responsible for National Schools Netball entries">
+      </div>
+    </div>
+    <div class="card">
+      <div class="yg-tabs">
+        <div class="yg-tab active" onclick="showYG('islandnetball','y8y9',this)">Y8 &amp; Y9</div>
+        <div class="yg-tab" onclick="showYG('islandnetball','u16plate',this)">U16 Plate</div>
+        <div class="yg-tab" onclick="showYG('islandnetball','y7',this)">Y7</div>
+      </div>
+      <div id="islandnetball-y8y9" class="yg-panel active"></div>
+      <div id="islandnetball-u16plate" class="yg-panel"></div>
+      <div id="islandnetball-y7" class="yg-panel"></div>
+    </div>
+  </div>
+
+  <!-- ═══ NATIONAL SCHOOLS NETBALL ═══ -->
   <div id="sport-netballnats" class="sport-section">
-    <div class="section-header"><h3>🏆 Netball — National Schools Competition</h3><p>U14, U16 and U18. 12th November.</p>
+    <div class="section-header"><h3>🏆 National Schools Netball</h3><p>Girls. U14, U16 and U18 age groups.</p>
       <table class="fx-table"><tbody>
         <tr><td>U14 National Schools</td><td>3 Nov &nbsp;·&nbsp; 2:00–4:00pm &nbsp;·&nbsp; BSJ</td></tr>
         <tr><td>U16 National Schools</td><td>5 Nov &nbsp;·&nbsp; 2:00–4:00pm &nbsp;·&nbsp; BSJ</td></tr>
@@ -492,8 +523,8 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
       </tbody></table></div>
     <div class="sport-teacher-bar">
       <div class="field" style="margin-bottom:0">
-        <label class="field-label">Teacher in charge — Netball Nationals <span class="req">*</span></label>
-        <input type="text" id="teacher-netballnats" placeholder="Full name of teacher responsible for Netball Nationals entries">
+        <label class="field-label">Teacher in charge — National Schools Netball <span class="req">*</span></label>
+        <input type="text" id="teacher-netballnats" placeholder="Full name of teacher responsible for National Schools Netball entries">
       </div>
     </div>
     <div class="card">
@@ -853,6 +884,7 @@ function initSport(sport) {
 // ── Init on load ─────────────────────────────────────────────────────────────
 buildTeamBlocks('rugby-boys-y7', 'rugby-boys', 'y7');
 buildTeamBlocks('rugby-girls-y7', 'rugby-girls', 'y7');
+buildTeamBlocks('islandnetball-y8y9', 'islandnetball', 'y8y9');
 buildTeamBlocks('netballnats-u14', 'netballnats', 'u14');
 buildTeamBlocks('hockeyisland-y7', 'hockeyisland', 'y7');
 buildTeamBlocks('badmintonss-boys-ks3', 'badmintonss-boys', 'ks3');
